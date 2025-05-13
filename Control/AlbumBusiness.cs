@@ -25,7 +25,7 @@ namespace Control
                     album.Id = (int)data.Reader["Id"];
                     album.Title = (string)data.Reader["Album"];
                     album.Artist = (string)data.Reader["Artist"];
-                    album.Songs = (int)data.Reader["Songs"];
+                    album.Songs = (string)data.Reader["Songs"];
                     if(!(data.Reader["ImageURL"] is DBNull))
                         album.ImageURL = (string)data.Reader["ImageURL"];
                     album.Genre = new Genre();
