@@ -30,21 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAlbumForm));
             this.panelSideAdd = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblGenre = new System.Windows.Forms.Label();
-            this.lblSongs = new System.Windows.Forms.Label();
+            this.lblEdition = new System.Windows.Forms.Label();
             this.lblImageURL = new System.Windows.Forms.Label();
+            this.lblSongs = new System.Windows.Forms.Label();
+            this.lblGenre = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtArtist = new System.Windows.Forms.TextBox();
             this.txtSongs = new System.Windows.Forms.TextBox();
             this.txtImageURL = new System.Windows.Forms.TextBox();
             this.pcbAddAlbum = new System.Windows.Forms.PictureBox();
-            this.lblEdition = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.cboGenre = new System.Windows.Forms.ComboBox();
             this.cboEdition = new System.Windows.Forms.ComboBox();
+            this.lblTitleEmpty = new System.Windows.Forms.Label();
+            this.lblArtistEmpty = new System.Windows.Forms.Label();
+            this.lblSongsEmpty = new System.Windows.Forms.Label();
             this.panelSideAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAddAlbum)).BeginInit();
             this.SuspendLayout();
@@ -64,112 +67,116 @@
             this.panelSideAdd.Size = new System.Drawing.Size(250, 421);
             this.panelSideAdd.TabIndex = 0;
             // 
-            // lblTitle
+            // lblEdition
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(31, 36);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(58, 27);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Title";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(31, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 27);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Artist";
-            // 
-            // lblGenre
-            // 
-            this.lblGenre.AutoSize = true;
-            this.lblGenre.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenre.ForeColor = System.Drawing.Color.White;
-            this.lblGenre.Location = new System.Drawing.Point(31, 137);
-            this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(83, 27);
-            this.lblGenre.TabIndex = 3;
-            this.lblGenre.Text = "Genre";
-            // 
-            // lblSongs
-            // 
-            this.lblSongs.AutoSize = true;
-            this.lblSongs.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSongs.ForeColor = System.Drawing.Color.White;
-            this.lblSongs.Location = new System.Drawing.Point(31, 241);
-            this.lblSongs.Name = "lblSongs";
-            this.lblSongs.Size = new System.Drawing.Size(76, 27);
-            this.lblSongs.TabIndex = 4;
-            this.lblSongs.Text = "Songs";
+            this.lblEdition.AutoSize = true;
+            this.lblEdition.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdition.Location = new System.Drawing.Point(51, 207);
+            this.lblEdition.Name = "lblEdition";
+            this.lblEdition.Size = new System.Drawing.Size(89, 27);
+            this.lblEdition.TabIndex = 6;
+            this.lblEdition.Text = "Edition";
             // 
             // lblImageURL
             // 
             this.lblImageURL.AutoSize = true;
             this.lblImageURL.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImageURL.ForeColor = System.Drawing.Color.White;
-            this.lblImageURL.Location = new System.Drawing.Point(31, 288);
+            this.lblImageURL.Location = new System.Drawing.Point(51, 300);
             this.lblImageURL.Name = "lblImageURL";
             this.lblImageURL.Size = new System.Drawing.Size(133, 27);
             this.lblImageURL.TabIndex = 5;
             this.lblImageURL.Text = "Image URL";
             // 
+            // lblSongs
+            // 
+            this.lblSongs.AutoSize = true;
+            this.lblSongs.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSongs.ForeColor = System.Drawing.Color.White;
+            this.lblSongs.Location = new System.Drawing.Point(51, 258);
+            this.lblSongs.Name = "lblSongs";
+            this.lblSongs.Size = new System.Drawing.Size(76, 27);
+            this.lblSongs.TabIndex = 4;
+            this.lblSongs.Text = "Songs";
+            // 
+            // lblGenre
+            // 
+            this.lblGenre.AutoSize = true;
+            this.lblGenre.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenre.ForeColor = System.Drawing.Color.White;
+            this.lblGenre.Location = new System.Drawing.Point(51, 152);
+            this.lblGenre.Name = "lblGenre";
+            this.lblGenre.Size = new System.Drawing.Size(83, 27);
+            this.lblGenre.TabIndex = 3;
+            this.lblGenre.Text = "Genre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(51, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Artist";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(51, 53);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(58, 27);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Title";
+            // 
             // txtTitle
             // 
-            this.txtTitle.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(272, 35);
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTitle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(272, 57);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(216, 28);
+            this.txtTitle.Size = new System.Drawing.Size(216, 23);
             this.txtTitle.TabIndex = 2;
             // 
             // txtArtist
             // 
-            this.txtArtist.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArtist.Location = new System.Drawing.Point(272, 82);
+            this.txtArtist.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtArtist.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArtist.Location = new System.Drawing.Point(272, 100);
             this.txtArtist.Name = "txtArtist";
-            this.txtArtist.Size = new System.Drawing.Size(216, 28);
+            this.txtArtist.Size = new System.Drawing.Size(216, 23);
             this.txtArtist.TabIndex = 3;
             // 
             // txtSongs
             // 
-            this.txtSongs.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSongs.Location = new System.Drawing.Point(272, 240);
+            this.txtSongs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSongs.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSongs.Location = new System.Drawing.Point(272, 262);
             this.txtSongs.Name = "txtSongs";
-            this.txtSongs.Size = new System.Drawing.Size(216, 28);
+            this.txtSongs.Size = new System.Drawing.Size(216, 23);
             this.txtSongs.TabIndex = 4;
             // 
             // txtImageURL
             // 
-            this.txtImageURL.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImageURL.Location = new System.Drawing.Point(272, 287);
+            this.txtImageURL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtImageURL.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImageURL.Location = new System.Drawing.Point(272, 305);
             this.txtImageURL.Name = "txtImageURL";
-            this.txtImageURL.Size = new System.Drawing.Size(216, 28);
+            this.txtImageURL.Size = new System.Drawing.Size(216, 23);
             this.txtImageURL.TabIndex = 5;
             this.txtImageURL.Leave += new System.EventHandler(this.txtImageURL_Leave);
             // 
             // pcbAddAlbum
             // 
-            this.pcbAddAlbum.Location = new System.Drawing.Point(494, 35);
+            this.pcbAddAlbum.Location = new System.Drawing.Point(494, 53);
             this.pcbAddAlbum.Name = "pcbAddAlbum";
-            this.pcbAddAlbum.Size = new System.Drawing.Size(249, 280);
+            this.pcbAddAlbum.Size = new System.Drawing.Size(249, 274);
             this.pcbAddAlbum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbAddAlbum.TabIndex = 6;
             this.pcbAddAlbum.TabStop = false;
-            // 
-            // lblEdition
-            // 
-            this.lblEdition.AutoSize = true;
-            this.lblEdition.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdition.Location = new System.Drawing.Point(31, 188);
-            this.lblEdition.Name = "lblEdition";
-            this.lblEdition.Size = new System.Drawing.Size(89, 27);
-            this.lblEdition.TabIndex = 6;
-            this.lblEdition.Text = "Edition";
             // 
             // btnConfirm
             // 
@@ -201,28 +208,61 @@
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // cboGenre
             // 
             this.cboGenre.BackColor = System.Drawing.Color.MidnightBlue;
-            this.cboGenre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGenre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGenre.ForeColor = System.Drawing.Color.White;
             this.cboGenre.FormattingEnabled = true;
-            this.cboGenre.Location = new System.Drawing.Point(272, 135);
+            this.cboGenre.Location = new System.Drawing.Point(272, 156);
             this.cboGenre.Name = "cboGenre";
-            this.cboGenre.Size = new System.Drawing.Size(216, 29);
+            this.cboGenre.Size = new System.Drawing.Size(216, 28);
             this.cboGenre.TabIndex = 9;
             // 
             // cboEdition
             // 
             this.cboEdition.BackColor = System.Drawing.Color.MidnightBlue;
-            this.cboEdition.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEdition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEdition.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEdition.ForeColor = System.Drawing.Color.White;
             this.cboEdition.FormattingEnabled = true;
-            this.cboEdition.Location = new System.Drawing.Point(272, 186);
+            this.cboEdition.Location = new System.Drawing.Point(272, 206);
             this.cboEdition.Name = "cboEdition";
-            this.cboEdition.Size = new System.Drawing.Size(216, 29);
+            this.cboEdition.Size = new System.Drawing.Size(216, 28);
             this.cboEdition.TabIndex = 10;
+            // 
+            // lblTitleEmpty
+            // 
+            this.lblTitleEmpty.AutoSize = true;
+            this.lblTitleEmpty.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblTitleEmpty.Location = new System.Drawing.Point(334, 80);
+            this.lblTitleEmpty.Name = "lblTitleEmpty";
+            this.lblTitleEmpty.Size = new System.Drawing.Size(0, 17);
+            this.lblTitleEmpty.TabIndex = 11;
+            // 
+            // lblArtistEmpty
+            // 
+            this.lblArtistEmpty.AutoSize = true;
+            this.lblArtistEmpty.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArtistEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblArtistEmpty.Location = new System.Drawing.Point(334, 122);
+            this.lblArtistEmpty.Name = "lblArtistEmpty";
+            this.lblArtistEmpty.Size = new System.Drawing.Size(0, 17);
+            this.lblArtistEmpty.TabIndex = 12;
+            // 
+            // lblSongsEmpty
+            // 
+            this.lblSongsEmpty.AutoSize = true;
+            this.lblSongsEmpty.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSongsEmpty.ForeColor = System.Drawing.Color.Red;
+            this.lblSongsEmpty.Location = new System.Drawing.Point(301, 285);
+            this.lblSongsEmpty.Name = "lblSongsEmpty";
+            this.lblSongsEmpty.Size = new System.Drawing.Size(0, 17);
+            this.lblSongsEmpty.TabIndex = 13;
             // 
             // AddAlbumForm
             // 
@@ -230,6 +270,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(755, 421);
+            this.Controls.Add(this.lblSongsEmpty);
+            this.Controls.Add(this.lblArtistEmpty);
+            this.Controls.Add(this.lblTitleEmpty);
             this.Controls.Add(this.cboEdition);
             this.Controls.Add(this.cboGenre);
             this.Controls.Add(this.btnCancel);
@@ -275,5 +318,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox cboGenre;
         private System.Windows.Forms.ComboBox cboEdition;
+        private System.Windows.Forms.Label lblTitleEmpty;
+        private System.Windows.Forms.Label lblArtistEmpty;
+        private System.Windows.Forms.Label lblSongsEmpty;
     }
 }

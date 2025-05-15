@@ -15,7 +15,7 @@ namespace Model
         public string Artist { get; set; }
         public Genre Genre { get; set; }
         public Edition Edition { get; set; }
-        public string Songs { get; set; }
+        public int Songs { get; set; }
         public string ImageURL { get; set; }
     }
 }

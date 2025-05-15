@@ -92,6 +92,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(250, 21);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
@@ -154,6 +155,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -173,6 +175,7 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -192,6 +195,7 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnMenu
             // 
@@ -254,9 +258,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAlbums.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAlbums.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvAlbums.EnableHeadersVisualStyles = false;
             this.dgvAlbums.GridColor = System.Drawing.Color.White;
             this.dgvAlbums.Location = new System.Drawing.Point(256, 140);
+            this.dgvAlbums.MultiSelect = false;
             this.dgvAlbums.Name = "dgvAlbums";
             this.dgvAlbums.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -267,15 +273,18 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAlbums.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAlbums.RowHeadersVisible = false;
             this.dgvAlbums.RowHeadersWidth = 51;
             this.dgvAlbums.RowTemplate.Height = 24;
             this.dgvAlbums.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAlbums.Size = new System.Drawing.Size(699, 359);
+            this.dgvAlbums.Size = new System.Drawing.Size(727, 359);
             this.dgvAlbums.TabIndex = 1;
+            this.dgvAlbums.SelectionChanged += new System.EventHandler(this.dgvAlbums_SelectionChanged);
             // 
             // pcbAlbums
             // 
-            this.pcbAlbums.Location = new System.Drawing.Point(961, 140);
+            this.pcbAlbums.BackColor = System.Drawing.Color.White;
+            this.pcbAlbums.Location = new System.Drawing.Point(989, 140);
             this.pcbAlbums.Name = "pcbAlbums";
             this.pcbAlbums.Size = new System.Drawing.Size(268, 359);
             this.pcbAlbums.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -286,7 +295,7 @@
             // 
             this.pcbTop.Location = new System.Drawing.Point(256, 0);
             this.pcbTop.Name = "pcbTop";
-            this.pcbTop.Size = new System.Drawing.Size(973, 123);
+            this.pcbTop.Size = new System.Drawing.Size(1001, 123);
             this.pcbTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbTop.TabIndex = 3;
             this.pcbTop.TabStop = false;
@@ -296,7 +305,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1241, 540);
+            this.ClientSize = new System.Drawing.Size(1269, 540);
             this.Controls.Add(this.pcbTop);
             this.Controls.Add(this.pcbAlbums);
             this.Controls.Add(this.dgvAlbums);
@@ -304,7 +313,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1259, 587);
+            this.MaximumSize = new System.Drawing.Size(1287, 587);
             this.MinimumSize = new System.Drawing.Size(1259, 587);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

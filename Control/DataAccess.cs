@@ -61,6 +61,11 @@ namespace Control
             }
         }
 
+        public void SetParameters(string name, object value)
+        {
+            command.Parameters.AddWithValue(name, value);
+        }
+
         public void closeConnection()
         {
             if (reader != null)

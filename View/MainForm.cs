@@ -36,9 +36,9 @@ namespace View
             {
                 albumList = business.AlbumList();
                 dgvAlbums.DataSource = albumList;
-                LoadImage(albumList[0].ImageURL);
                 HideColumns();
-
+                LoadImage(albumList[0].ImageURL);
+                
             }
             catch (Exception ex)
             {
@@ -98,6 +98,82 @@ namespace View
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadWindow();
+        }
+
+        private void dgvAlbums_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgvAlbums.CurrentRow != null)
+            {
+                Album selected = (Album)dgvAlbums.CurrentRow.DataBoundItem;
+                LoadImage(selected.ImageURL);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddAlbumForm open = new AddAlbumForm();
+            open.ShowDialog();
+            LoadWindow();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if(dgvAlbums.CurrentRow == null)
+            {
+                MessageBox.Show("There is no album selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Album selected;
+            selected = (Album)dgvAlbums.CurrentRow.DataBoundItem;
+            AddAlbumForm Modify = new AddAlbumForm(selected);
+            Modify.ShowDialog();
+            LoadWindow();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(dgvAlbums.CurrentRow == null)
+            {
+                MessageBox.Show("There is no album selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Delete();
+        }
+
+        private void Delete()
+        {
+            AlbumBusiness business = new AlbumBusiness();
+            Album selected;
+
+            try
+            {
+                DialogResult answer = MessageBox.Show("Do you want to delete this album?", "Removed", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (answer == DialogResult.Yes)
+                {
+                    selected = (Album)dgvAlbums.CurrentRow.DataBoundItem;
+                    business.Delete(selected.Id);
+                    LoadWindow();
+                }    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            List<Album> list;
+            string filter = txtSearch.Text;
+
+            if (filter.Length >= 3)
+                list = albumList.FindAll(x => x.Title.ToUpper().Contains(filter.ToUpper()) || x.Artist.ToUpper().Contains(filter.ToUpper()));
+            else
+                list = albumList;
+
+            dgvAlbums.DataSource = null;
+            dgvAlbums.DataSource = list;
+            HideColumns();         
         }
     }
 }
