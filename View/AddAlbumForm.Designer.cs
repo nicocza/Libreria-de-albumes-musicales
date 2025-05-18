@@ -54,7 +54,7 @@
             // 
             // panelSideAdd
             // 
-            this.panelSideAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSideAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(12)))), ((int)(((byte)(24)))));
             this.panelSideAdd.Controls.Add(this.lblEdition);
             this.panelSideAdd.Controls.Add(this.lblImageURL);
             this.panelSideAdd.Controls.Add(this.lblSongs);
@@ -139,7 +139,7 @@
             this.txtTitle.Location = new System.Drawing.Point(272, 57);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(216, 23);
-            this.txtTitle.TabIndex = 2;
+            this.txtTitle.TabIndex = 0;
             // 
             // txtArtist
             // 
@@ -148,7 +148,7 @@
             this.txtArtist.Location = new System.Drawing.Point(272, 100);
             this.txtArtist.Name = "txtArtist";
             this.txtArtist.Size = new System.Drawing.Size(216, 23);
-            this.txtArtist.TabIndex = 3;
+            this.txtArtist.TabIndex = 1;
             // 
             // txtSongs
             // 
@@ -171,68 +171,70 @@
             // 
             // pcbAddAlbum
             // 
-            this.pcbAddAlbum.Location = new System.Drawing.Point(494, 53);
+            this.pcbAddAlbum.Location = new System.Drawing.Point(494, 57);
             this.pcbAddAlbum.Name = "pcbAddAlbum";
-            this.pcbAddAlbum.Size = new System.Drawing.Size(249, 274);
+            this.pcbAddAlbum.Size = new System.Drawing.Size(249, 270);
             this.pcbAddAlbum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbAddAlbum.TabIndex = 6;
             this.pcbAddAlbum.TabStop = false;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(16)))), ((int)(((byte)(35)))));
             this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.btnConfirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(16)))), ((int)(((byte)(35)))));
+            this.btnConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Location = new System.Drawing.Point(363, 353);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(125, 41);
-            this.btnConfirm.TabIndex = 7;
+            this.btnConfirm.TabIndex = 6;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(16)))), ((int)(((byte)(35)))));
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(16)))), ((int)(((byte)(35)))));
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(494, 353);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(125, 41);
-            this.btnCancel.TabIndex = 8;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // cboGenre
             // 
-            this.cboGenre.BackColor = System.Drawing.Color.MidnightBlue;
+            this.cboGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(16)))), ((int)(((byte)(35)))));
             this.cboGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboGenre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGenre.ForeColor = System.Drawing.Color.White;
             this.cboGenre.FormattingEnabled = true;
             this.cboGenre.Location = new System.Drawing.Point(272, 156);
             this.cboGenre.Name = "cboGenre";
             this.cboGenre.Size = new System.Drawing.Size(216, 28);
-            this.cboGenre.TabIndex = 9;
+            this.cboGenre.TabIndex = 2;
             // 
             // cboEdition
             // 
-            this.cboEdition.BackColor = System.Drawing.Color.MidnightBlue;
+            this.cboEdition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(16)))), ((int)(((byte)(35)))));
             this.cboEdition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEdition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEdition.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEdition.ForeColor = System.Drawing.Color.White;
             this.cboEdition.FormattingEnabled = true;
             this.cboEdition.Location = new System.Drawing.Point(272, 206);
             this.cboEdition.Name = "cboEdition";
             this.cboEdition.Size = new System.Drawing.Size(216, 28);
-            this.cboEdition.TabIndex = 10;
+            this.cboEdition.TabIndex = 3;
             // 
             // lblTitleEmpty
             // 
@@ -268,7 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(18)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(755, 421);
             this.Controls.Add(this.lblSongsEmpty);
             this.Controls.Add(this.lblArtistEmpty);
@@ -284,6 +286,7 @@
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.panelSideAdd);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(773, 468);
